@@ -12,10 +12,11 @@ cache:
   directories:
     - '$HOME/.sonar/cache'
 script:
-- sh tron.sh
-- "./gradlew build"
-- "./gradlew jacocoTestReport"
-- "bash <(curl -s https://codecov.io/bash) -t 6378b023-ada0-473a-8d21-a78ddbb0b641 -s build/reports/jacoco/"
+  - sh tron.sh
+  - "./gradlew build"
+  - "./gradlew jacocoTestReport"
+after_success:
+  - "bash <(curl -s https://codecov.io/bash) -t 6378b023-ada0-473a-8d21-a78ddbb0b641 -s build/reports/jacoco/"
 
 skip_build:
 - README.md：
