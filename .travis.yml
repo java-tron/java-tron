@@ -16,7 +16,7 @@ script:
   - "./gradlew build"
   - "./gradlew jacocoTestReport"
 after_success:
-  - "bash <(curl -s https://codecov.io/bash) -t 6378b023-ada0-473a-8d21-a78ddbb0b641 -s build/reports/jacoco/"
+  - "bash <(curl -s https://codecov.io/bash) -t 07b20e85-1eb7-4d41-8ac0-79e2afc6e1d9 -s build/reports/jacoco/"
 
 skip_build:
   - README.md：
